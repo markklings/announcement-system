@@ -55,7 +55,7 @@ To develop a centralized, reliable, and user-friendly web application where teac
 ---
 ```mermaid
 gantt
-    Announcement System Project Timeline
+    title Announcement System Project Timeline
     dateFormat  YYYY-MM-DD
     axisFormat  Week %W
 
