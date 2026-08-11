@@ -53,26 +53,12 @@ To develop a centralized, reliable, and user-friendly web application where teac
     - **Focus:** Monitoring application health, applying security patches, gathering user feedback, and addressing bug reports.
     - **Deliverable:** System changelogs, user feedback logs.
 ---
-```mermaid
-gantt
-    title Announcement System Project Timeline
-    dateFormat  YYYY-MM-DD
-    axisFormat  Week %W
-
-    section Planning & Design
-    Planning, SRS, UML & Flowchart        :a1, 2026-08-10, 7d
-
-    section Foundation
-    DB Design, Migrations, Setup          :a2, after a1, 7d
-
-    section Core Backend
-    Core APIs, Auth & RBAC (Roles)        :a3, after a2, 14d
-
-    section Frontend & Features
-    Frontend UI, Feed & Notifications     :a4, after a3, 14d
-
-    section Testing & Launch
-    Testing (UAT, Bugs) & Deployment      :a5, after a4, 7d
-
-    section Finalization
-    Docs, Presentation Prep & Buffer      :a6, after a5, 7d
+### Timeline Plan
+| **Phases** | **Week Number** |
+|:--- |:---:|
+| Phase 1: Planning & Specs (UML, Flowchart, Gantt) | 1 |
+| Phase 2: Database & Architecture (ERD, Migrations) | 2 |
+| Phase 3: Core Backend & Auth (Laravel API/Inertia) | 3 & 4 |
+| Phase 4: Frontend & Features (Vue 3, Notifications) | 5 & 6 |
+| Phase 5: Testing & Deployment (QA, Render Setup) | 7 |
+| Phase 6: Finalizing Docs & Polish | 8 |
