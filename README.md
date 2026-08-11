@@ -54,11 +54,11 @@ To develop a centralized, reliable, and user-friendly web application where teac
     - **Deliverable:** System changelogs, user feedback logs.
 ---
 ### Timeline Plan
-| **Phases** | **Week Number** |
-|:--- |:---:|
-| Phase 1: Planning & Specs (UML, Flowchart, Gantt) | 1 |
-| Phase 2: Database & Architecture (ERD, Migrations) | 2 |
-| Phase 3: Core Backend & Auth (Laravel API/Inertia) | 3 & 4 |
-| Phase 4: Frontend & Features (Vue 3, Notifications) | 5 & 6 |
-| Phase 5: Testing & Deployment (QA, Render Setup) | 7 |
-| Phase 6: Finalizing Docs & Polish | 8 |
+| **Phases** | **Week Number** | **Status**
+|:--- |:---:|:---: |
+| Phase 1: Planning & Specs (UML, Flowchart, Gantt) | 1 | `active` |
+| Phase 2: Database & Architecture (ERD, Migrations) | 2 | `pending` |
+| Phase 3: Core Backend & Auth (Laravel API/Inertia) | 3 & 4 | `pending` |
+| Phase 4: Frontend & Features (Vue 3, Notifications) | 5 & 6 | `pending` |
+| Phase 5: Testing & Deployment (QA, Render Setup) | 7 | `pending` |
+| Phase 6: Finalizing Docs & Polish | 8 | `pending` |
