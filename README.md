@@ -21,7 +21,7 @@ To develop a centralized, reliable, and user-friendly web application where teac
 | **Notifications:** In-app notifications or email alerts for high-priority posts. | Voice/Video announcement hosting. |
 | **Dashboard:** Admin panel to manage users, posts, and moderation settings. | |
 ---
-#### Resource Allocation & SDLC Phase Breakdown
+### Resource Allocation & SDLC Phase Breakdown
 | **Tool Name** |  **Type** | **Role / Description** |
 | --- | --- | --- |
 | **VILT:** Vue.js, Inertia.js, Laravel, Tailwind CSS | Frontend | This is the standard level for enterprise-grade laravel applications. |
@@ -30,7 +30,7 @@ To develop a centralized, reliable, and user-friendly web application where teac
 | **Render** | Hosting Service | This is where the system hosted. |
 | **Git + GitHub** | CI/CD & Version Control | This is where version control, documentations and source code stored. |
 ---
-#### SDLC Phases & Action Plan
+### SDLC Phases & Action Plan
 1. **Planning**
     - **Focus:** Define system requirements, scope boundaries, and timeline (Gantt chart or Kanban board).
     - **Deliverable:** Project Charter, Software Requirement Specification (SRS) outline.
@@ -53,12 +53,77 @@ To develop a centralized, reliable, and user-friendly web application where teac
     - **Focus:** Monitoring application health, applying security patches, gathering user feedback, and addressing bug reports.
     - **Deliverable:** System changelogs, user feedback logs.
 ---
-### Timeline Plan
-| **Phases** | **Week Number** | **Status**
-|:--- |:---:|:---: |
-| Phase 1: Planning & Specs (UML, Flowchart, Gantt) | 1 | `active` |
-| Phase 2: Database & Architecture (ERD, Migrations) | 2 | `pending` |
-| Phase 3: Core Backend & Auth (Laravel API/Inertia) | 3 & 4 | `pending` |
-| Phase 4: Frontend & Features (Vue 3, Notifications) | 5 & 6 | `pending` |
-| Phase 5: Testing & Deployment (QA, Render Setup) | 7 | `pending` |
-| Phase 6: Finalizing Docs & Polish | 8 | `pending` |
+### Project Timeline
+```mermaid
+gantt
+    title Classroom Announcement System - Project Timeline
+    dateFormat  YYYY-MM-DD
+    axisFormat  Week %W
+
+    section Phase 1: Planning
+    Planning & Specs (UML, Flowchart, Gantt) :active, p1, 2026-01-01, 7d
+
+    section Phase 2: Database
+    Database & Architecture (ERD, Migrations) :p2, after p1, 7d
+
+    section Phase 3: Core Backend
+    Core Backend & Auth (Laravel API/Inertia) :p3, after p2, 14d
+
+    section Phase 4: Frontend
+    Frontend & Features (Vue 3, Notifications) :p4, after p3, 14d
+
+    section Phase 5: Testing
+    Testing & Deployment (QA, Render Setup)   :p5, after p4, 7d
+
+    section Phase 6: Finalizing
+    Finalizing Docs & Polish                  :p6, after p5, 7d
+```
+---
+### Use Case Diagram
+```mermaid
+graph LR
+    %% Actors
+    Teacher["Classroom Officer / Teacher"]
+    SuperAdmin["Super Admin"]
+    Student["Students"]
+
+    subgraph System ["Classroom Announcement System"]
+        direction TB
+
+        %% Teacher Use Cases
+        UC1("Manage Class Students")
+        UC2("Manage Announcements")
+        UC3("Manage Contents & Storage")
+        UC4("Request Admin Dashboard")
+
+        %% Super Admin Use Cases
+        UC5("Authorize Admin Access")
+        UC6("Manage Active Accounts")
+        UC7("View & Manage System Logs")
+        UC8("Manage System Announcements")
+
+        %% Student Use Cases
+        UC9("Access Student Dashboard")
+        UC10("View Announcements")
+        UC11("Ask Questions About Announcement")
+
+        %% Relationships within System
+        UC5 -. "Extend\n(Requires Authorization)" .-> UC4
+    end
+
+    %% Actor Connections
+    Teacher --- UC1
+    Teacher --- UC2
+    Teacher --- UC3
+    Teacher --- UC4
+
+    SuperAdmin --- UC5
+    SuperAdmin --- UC6
+    SuperAdmin --- UC7
+    SuperAdmin --- UC8
+
+    Student --- UC9
+    Student --- UC10
+    Student --- UC11
+```
+---
